@@ -15,6 +15,13 @@
     width: 80%;
 }
 
+h2{
+ text-align:center;
+    color:#FCBD1B;
+}
+.scrollPage{
+    text-align:center
+}
 /* LOCATION VIEW STYLES */
 .map {
     position: absolute;
@@ -150,4 +157,14 @@
         background-image: url(../styles/images/search_active2x.png);
         background-size: 100%;
     }
+}
+
+.goalsScrollView{
+    height: 4%;
+    
+}
+
+.listview{
+    height:50%;
+    overflow: auto;
 }

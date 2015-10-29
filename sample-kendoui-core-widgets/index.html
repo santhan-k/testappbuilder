@@ -97,22 +97,38 @@
     <div id="tabstrip-weather"
         data-role="view"
         data-title="Weather"
-        data-model="app.weatherService.viewModel">
-
-        <ul data-role="listview" data-style="inset"
+        data-model="app.weatherService.viewModel" data-use-native-scrolling="false">
+        <div class="goalsScrollView">
+        <div  data-role="scrollview">
+            <div class="scrollPage" data-role="page"><h2>Reduce fuel costs</h2><br> 
+                <img src="Car.png">
+            </div>
+            <div class="scrollPage" data-role="page"><h2>Drink less coffee</h2><br>
+                <img src="Coffee.png">
+                
+            </div>
+             <div class="scrollPage" data-role="page"><h2>Eat out less</h2><br>
+                <img src="Pizza.jpg">
+                
+            </div>
+             <div class="scrollPage" data-role="page"><h2>Buy a home</h2>!<br>
+                <img src="Home.png">                
+            </div>
+        </div>
+            </div>
+        <ul data-role="listview" class="tipsList" data-style="inset"
             data-bind="source: weatherDataSource"
-            data-template="weather-forecast-template">
+            data-template="weather-forecast-template" data-endless-scroll="false" data-type="flat">
         </ul>
     </div>
 
     <!--Weather forecast template-->
     <script id="weather-forecast-template" type="text/x-kendo-tmpl">
-        <div class="w-item-template">
-            <span class="w-icon ${image}"></span>
+        <div class="w-item-template">            
             <h4 class="w-date">${day}</h4>
             <div class="w-temp">
-                <span>${highTemperature}<sup>&deg;</sup></span>
-                <span>${lowTemperature}<sup>&deg;</sup></span>
+                <span>${highTemperature}</span>
+                
             </div>
         </div>
     </script>
@@ -136,5 +152,6 @@
             </div>
         </div>
     </div>
+    <div id="View1" data-role="view"></div>
 </body>
 </html>
